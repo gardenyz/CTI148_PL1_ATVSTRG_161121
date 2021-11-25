@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Atividade 2</title>
+</head>
+
+<body>
+    <form name="frmSolt">
+        Informe um caractere :<input type="text" name="txtCarc" size="30"><br>
+        Informe um numero inteiro :<input type="text" name="txtNum" size="30"><br><br>
+        <input type="button" value="Enviar" onclick="enviarDados();" style="height:40px; width:100px">
+
+    </form>
+    <script language="javascript">
+        function enviarDados() {
+            var carc, num, ind;
+            carc = document.frmSolt.txtCarc.value;
+            num = parseInt(document.frmSolt.txtNum.value);
+            document.write("<center>");
+            document.write("<h1>" + carc + " copiado " + num + " vezes</h1>");
+            document.write("<table border=2 ><tr><td>");
+            for (ind = 1; ind <= num; ind++) {
+                document.write(carc);
+            }
+            document.write("</td></tr></table>");
+            document.write("</center>");
+        }
+
+    </script>
+</body>
+
+</html>

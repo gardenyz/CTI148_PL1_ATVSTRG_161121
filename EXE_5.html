@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Atividade 5</title>
+   
+
+</head>
+
+<body>
+    <center>
+        <form name="formS">
+            Informe uma string : <input type="text" name="nome" size="30"><br><br>
+            <input type="button" value="Enviar" onclick="enviarString();" style="height:40px; width:100px">
+            <br><br>
+        </form>
+    </center>
+    <script language="javascript">
+        function enviarString() {
+            var s, sob, pos, name;
+            s = document.formS.nome.value;
+            pos = s.lastIndexOf(" ");
+            sob = s.substring(pos, s.length);
+            name = s.substring(0, pos);
+            document.write("<center>");
+            document.write("<h1>O nome  digitado esta em catálogo telefônico :</h1>");
+            document.write("<h2>" + sob + ", " + name + "</h2>");
+            document.write("</center>");
+        }
+    </script>
+</body>
+
+</html>

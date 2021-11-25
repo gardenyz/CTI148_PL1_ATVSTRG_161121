@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Atividade 6</title>
+</head>
+
+<body>
+    <center>
+        <form name="form">
+            Informe uma string : <input type="text" name="nome" size="30"><br><br>
+            <input type="button" value="Enviar" onclick="enviarString();" style="height:40px; width:100px">
+            <br><br>
+        </form>
+    </center>
+    <script language="javascript">
+        function enviarString() {
+            var s, s1, s2, pos, Upos, pri, meio, ult, i;
+            s = document.form.nome.value;
+
+            Upos = s.lastIndexOf(" ");
+            s1 = s.substring(Upos, s.length);     
+            ult = s1.toUpperCase();   
+
+            var nomes = new Array();
+            nomes = s.split(" ");
+            var tamanho = nomes.length;
+            var abv = nomes[0];
+            for (i = 1; i < tamanho - 1; i++) {
+                abv += " " + nomes[i].charAt(0) + ". ";
+            }
+
+            document.write("<center>");
+            document.write("<h2>O nome digitado esta em referência bibliográfica : </h2>");
+            document.write("<b> " + ult + "</b>, " + abv); 
+            document.write("</center>");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Atividade 4</title>
+</head>
+
+<body>
+    <form name="formStr">
+        Informe uma string : <input type="text" name="txtString" size="30"><br><br>
+        <input type="button" value="Enviar" onclick="enviarString();" style="height:40px; width:100px">
+        <br><br>
+    </form>
+
+    <script language="javascript">
+        function enviarString() {
+            var s, strg, strgInv,i;
+            s = document.formStr.txtString.value;
+            strg = s.replace(" ", "");
+            strgInv ="";
+            for ( i = strg.length - 1; i >= 0; i--){
+                strgInv += strg.charAt(i);
+            }
+             if (strg == strgInv) {
+
+                document.write("<h1>A string " + s + " é palíndromo</h1>");
+            }
+            else {
+                document.write("<h1>A string " + s + " nao é palíndromo</h1>");
+            }
+
+        }
+    </script>
+</body>
+
+</html>

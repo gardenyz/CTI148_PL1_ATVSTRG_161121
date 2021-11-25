@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Atividade 1</title>
+    <style type="text/css">
+        body {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+    <center>
+        <form name="formStr">
+            Informe uma palavra(string):<input type="text" name="txtString" size="30"><br><br>
+            <input type="button" value="Enviar" onclick="enviarString();" style="height:40px; width:100px">
+            <br><br>
+        </form>
+
+        <script language="javascript">
+            function enviarString() {
+                var string, UltPos, pos;
+                string = document.formStr.txtString.value;
+                UltPos = string.length;
+                //linha
+                document.write("<center>");
+                document.write(string + " em linhas");
+                document.write("<table border='2'>");
+                for (pos = 0; pos < UltPos; pos++) {
+                    document.write("<tr><td >" + string.charAt(pos) + "</td></tr>");
+                }
+                document.write("</table><br><br>");
+
+                //coluna
+                document.write(string + " em colunas");
+                document.write("<table border='2'><tr>");
+                for (pos = 0; pos < UltPos; pos++) {
+                    document.write("<td>" + string.charAt(pos) + "</td>");
+                }
+                document.write("</tr></table >");
+                document.write("</center>");
+            }
+        </script>
+    </center>
+</body>
+
+</html>
